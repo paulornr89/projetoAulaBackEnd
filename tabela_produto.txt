@@ -1,0 +1,16 @@
+/*
+Crie mais uma tabela chamada "produto" no banco de dados "aula". 
+A tabela produto deve conter um campo auto-increment chamado codproduto, 
+um campo nomeprod varchar(50) para armazenar o nome do produto e um campo descprod varchar(100) para armazenar a descrição do produto.
+ Todos "not null", sendo codproduto a chave primária.
+*/
+
+CREATE TABLE produto (
+codproduto INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+nomeprod VARCHAR(30) NOT NULL,
+descprod VARCHAR(100) NOT NULL
+);
+
+insert into pessoa (nome,email,cpf) values ('Maria da Silva','maria@gmail.com','12345678901');
+insert into pessoa (nome,email,cpf) values ('João da Silva','joao@gmail.com','12345678901');
+insert into pessoa (nome,email,cpf) values ('José da Silva','jose@gmail.com','12345678901');
