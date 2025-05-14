@@ -3,10 +3,10 @@
     <h3>Produtos</h3>
 </header>
 <ul class="menu">
-    <li><a target="_self" href='produto.php'>Cadastrar Produto</a><br></li>
-    <li><a target="_self" href='listaProdutos.php'>Lista Produtos</a><br></li>
-    <li><a target="_self" href='consultarCarrinho.php'>Consultar Carrinho</a><br></li>
     <li><a target="_self" href="../index.php">Home</a></li>
+    <li><a target="_self" href='produto.php'>Cadastrar Produto</a><br></li>
+    <li><a target="_self" href='listaProdutos.php'>Alterar Produtos</a><br></li>
+    <li><a target="_self" href='consultarCarrinho.php'>Consultar Carrinho</a><br></li>
 </ul>
 
 <div class="mostraProdutosVenda">

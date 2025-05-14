@@ -19,8 +19,8 @@
         </header>
         <main>
             <ul class="menu">
-                <li><a target="_self" href='listaProdutos.php'>Produtos</a><br></li>
                 <li><a target="_self" href="../index.php">Home</a></li>
+                <li><a target="_self" href='apresentaProdutos.php'>Produtos</a><br></li>
             </ul>
             
             <form action="./cadastroProduto.php" method="POST" enctype="multipart/form-data">

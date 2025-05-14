@@ -4,7 +4,7 @@
 </header>
 <ul class="menu">
     <li><a target="_self" href="../index.php">Home</a></li>
-    <li><a target="_self" href='produto.php'>Voltar </a><br></li>
+    <li><a target="_self" href='apresentaProdutos.php'>Voltar </a><br></li>
 </ul>
 <div class="mostraProdutos">
     <?php
