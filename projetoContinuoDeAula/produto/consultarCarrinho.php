@@ -31,6 +31,13 @@
     </div>
 <?php
     }
+
+    if($total != 0) {
 ?>
-    <p class="valorTotal"><strong>Total:</strong> R&dollar; <?php echo str_replace(".", ",", $total)?></p>
+        <p class="valorTotal"><strong>Total:</strong> R&dollar; <?php echo str_replace(".", ",", $total)?></p>
+<?php
+     } else {
+        echo "<h3 style='text-align:center;'>Nenhum produto no carrinho!</h3>";
+     }
+?>
 </form>
