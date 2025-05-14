@@ -7,12 +7,9 @@ if((!isset($_SESSION['login'])) && (!isset($_SESSION['usuarioLogado']))) {
 
 include "conecta.php";
 
-$sql = "select * from pessoa order by codpessoa";
+$resultado = $pdo->query("select * from pessoa order by codpessoa");
 
-
-$resultado = mysqli_query($conexao,$sql);
-
-while($linha=mysqli_fetch_assoc($resultado)) {
+while($linha = $resultado->fetch( PDO::FETCH_ASSOC ) ) {
 
 ?>
     <section>
@@ -30,6 +27,6 @@ while($linha=mysqli_fetch_assoc($resultado)) {
 <?php
 }
 ?>
-<a href='index.php'>Voltar </a>
+<a href='usuario.php'>Voltar </a>
 
 

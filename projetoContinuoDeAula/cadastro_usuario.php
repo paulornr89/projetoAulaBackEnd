@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 
 if((!isset($_SESSION['login'])) && (!isset($_SESSION['usuarioLogado']))){
@@ -21,18 +20,11 @@ include "conecta.php";
 if (!empty($nome_arquivo)) {
 
    if (move_uploaded_file($arquivo_temporario, "assets/perfil/$novoNome")) {//depois que salva o arquivo no servidor é que vai salvar no banco
-      $sql="insert into pessoa (nome,email,cpf,senha, imagem) values ('$nome','$email','$cpf','$senha','$novoNome')";
+      $resultado = $pdo->exec("insert into pessoa (nome,email,cpf,senha, imagem) values ('$nome','$email','$cpf','$senha','$novoNome')");
 
-      echo $sql;
-
-      $resultado = mysqli_query($conexao,$sql);
-
-      if($resultado)
-      {
+      if($resultado) {
          echo "Cadastro Efetuado com sucesso";
-      }
-      else
-      {
+      } else  {
          echo 'Código de erro:'.mysqli_errno( $conexao ).'<br>';
          echo 'Mensagem de erro:'.mysqli_error( $conexao).'<br>';
       }
@@ -43,8 +35,5 @@ if (!empty($nome_arquivo)) {
 } else {
    die("Selecione o arquivo a ser enviado"); 
 }
-   
-
-
 ?>
 <br><a href='index.php'>Voltar </a>

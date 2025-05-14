@@ -24,10 +24,9 @@
     }
 
     if($sql != "") {
-        $resultado = mysqli_query($conexao, $sql);
-        $numLinhas = mysqli_num_rows($resultado);
+        $resultado = $pdo->query($sql);
         
-        while($usuario = mysqli_fetch_assoc($resultado)) {
+        while($usuario = $resultado->fetch( PDO::FETCH_ASSOC ) ) {
 ?>
     <section style="border: solid 0.5px black; width:fit-content;">
         <p><img width="100px" height="100px" src="./assets/perfil/<?php echo $usuario["imagem"]?>"></p>

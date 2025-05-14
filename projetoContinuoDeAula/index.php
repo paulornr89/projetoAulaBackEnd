@@ -1,3 +1,7 @@
+<link rel="stylesheet" href="./style.css">
+<header>
+    <h3>Página Inicial</h3>
+</header>
 <?php
 session_start();
 
@@ -6,10 +10,10 @@ if((!isset($_SESSION['login'])) && (!isset($_SESSION['usuarioLogado']))){
 }
 
 ?>
-<h3>Menu</h3>
-    <ul>
+    <ul class="menu">
         <li><a target="_self" href="./usuario.php">Usuário</a></li>
         <li><a target="_self" href="./editarPerfil.php">Editar Perfil</a></li>
-        <li><a target="_self" href="./produto/produto.php">Produto</a></li>
+        <li><a target="_self" href="./produto/apresentaProdutos.php">Produtos</a></li>
+        <li><a href='sair.php'>Sair</a></li>
     </ul>
-<a href='sair.php'>Sair</a>
+    

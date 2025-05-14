@@ -11,12 +11,10 @@
 
     $email = $_SESSION['login'];
 
-    $sql = "select * from pessoa where email = '$email'";
+    $resultado = $pdo->query("select * from pessoa where email = '$email'");
 
-    $resultado = mysqli_query($conexao, $sql);
-
-    if($resultado){
-        $usuario = mysqli_fetch_assoc($resultado);
+    if($resultado->rowCount() > 0){
+        $usuario = $resultado->fetch( PDO::FETCH_ASSOC );
 ?>
 <br>
 <br>
